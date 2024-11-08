@@ -1,0 +1,62 @@
+body {
+    background-color: #E6E6DD;
+}
+.navbar {
+    background-color: #546156;
+    position: relative;
+    z-index: 10;
+}
+.navbar a {
+    color: #E6E6DD;
+    font-weight: 400;
+    padding-bottom: 4px;
+    position: relative;
+    transition: transform 0.2s ease, font-size 0.2s ease;
+}
+.navbar a:hover {
+    transform: scale(1.1);
+    font-size: 1.1rem;
+}
+.navbar a.active {
+    font-weight: 700;
+    cursor: default;
+}
+.navbar a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #E6E6DD;
+    transition: all 0.3s ease-in-out;
+}
+.navbar a:hover::before {
+    left: 0;
+    width: 100%;
+}
+.background-images {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.3;
+}
+.fade {
+    animation: fade 12s infinite;
+}
+@keyframes fade {
+    0% { opacity: 0; }
+    33% { opacity: 1; }
+    66% { opacity: 1; }
+    100% { opacity: 0; }
+}
+/* Body content positioning */
+.content {
+    position: relative;
+    z-index: 10;
+    margin-top: 20vh;
+    text-align: center;
+}
